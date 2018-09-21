@@ -87,7 +87,7 @@
 <meta property="og:site_name" content="紫衣小生的博客">
 <meta property="og:description" content="next主主题装上了，但是初始页面，真的一般般，一颗躁动的心就开始造作了！1. 左上角丝带展示效果&amp;amp;fork me on github先到这里选择你想要的效果选好以后，复制文字到 themes/next/layout/_layout.swig 文件中，1&amp;lt;div class=&amp;quot;headband&amp;quot;&amp;gt;&amp;lt;/div&amp;gt; 的下面，把href改成你自己的git">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-09-21T14:20:10.369Z">
+<meta property="og:updated_time" content="2018-09-21T14:36:15.926Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="next个性化配置">
 <meta name="twitter:description" content="next主主题装上了，但是初始页面，真的一般般，一颗躁动的心就开始造作了！1. 左上角丝带展示效果&amp;amp;fork me on github先到这里选择你想要的效果选好以后，复制文字到 themes/next/layout/_layout.swig 文件中，1&amp;lt;div class=&amp;quot;headband&amp;quot;&amp;gt;&amp;lt;/div&amp;gt; 的下面，把href改成你自己的git">
@@ -320,7 +320,7 @@
                   <span class="post-meta-item-text">Reading time &asymp;</span>
                 
                 <span title="Reading time">
-                  10
+                  11
                 </span>
               
             </div>
@@ -373,8 +373,11 @@
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">在文件next/source/css/_common/components/post/post.styl的末尾调用stl文件，如下：</span><br><span class="line">@import “my-post-copyright”</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>在写博客的时候，Markdown文件的头部信息里面，将copyright引用</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">copyright: true    //记得空格</span><br></pre></td></tr></table></figure></li>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">copyright: true    //记得空格</span><br></pre></td></tr></table></figure>
+</li>
 </ul>
+<h2 id="7-代码块自定义样式"><a href="#7-代码块自定义样式" class="headerlink" title="7.代码块自定义样式"></a>7.代码块自定义样式</h2><p>打开\themes\next\source\css_custom\custom.styl,向里面加入：(颜色可以自己定义)<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">// Custom styles.</span><br><span class="line">code &#123;</span><br><span class="line">    color: #ff7600;</span><br><span class="line">    background: #fbf7f8;</span><br><span class="line">    margin: 2px;</span><br><span class="line">&#125;</span><br><span class="line">// 大代码块的自定义样式</span><br><span class="line">.highlight, pre &#123;</span><br><span class="line">    margin: 5px 0;</span><br><span class="line">    padding: 5px;</span><br><span class="line">    border-radius: 3px;</span><br><span class="line">&#125;</span><br><span class="line">.highlight, code, pre &#123;</span><br><span class="line">    border: 1px solid #d6d6d6;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<h2 id="8-侧边栏社交，及小图标的增加"><a href="#8-侧边栏社交，及小图标的增加" class="headerlink" title="8.侧边栏社交，及小图标的增加"></a>8.侧边栏社交，及小图标的增加</h2><p>修改配置文件_config.yml<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">social:</span><br><span class="line">	GitHub: https://github.com/purplechildren</span><br><span class="line"></span><br><span class="line">social-icons:</span><br><span class="line">	enable: true</span><br><span class="line">	GitHub: github</span><br></pre></td></tr></table></figure></p>
 
       
     </div>
@@ -489,6 +492,32 @@
 
     <div class="post-spread">
       
+        <!-- JiaThis Button BEGIN -->
+<div class="jiathis_style">
+<span class="jiathis_txt">分享到：</span>
+<a class="jiathis_button_fav">收藏夹</a>
+<a class="jiathis_button_copy">复制网址</a>
+<a class="jiathis_button_email">邮件</a>
+<a class="jiathis_button_weixin">微信</a>
+<a class="jiathis_button_qzone">QQ空间</a>
+<a class="jiathis_button_tqq">腾讯微博</a>
+<a class="jiathis_button_douban">豆瓣</a>
+<a class="jiathis_button_share">一键分享</a>
+
+<a href="http://www.jiathis.com/share?uid=2140465" class="jiathis jiathis_txt jiathis_separator jtico jtico_jiathis" target="_blank">更多</a>
+<a class="jiathis_counter_style"></a>
+</div>
+<script type="text/javascript" >
+var jiathis_config={
+  data_track_clickback:true,
+  summary:"",
+  shortUrl:false,
+  hideMore:false
+}
+</script>
+<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js?uid=" charset="utf-8"></script>
+<!-- JiaThis Button END -->
+      
     </div>
   </div>
 
@@ -580,6 +609,16 @@
           
 
           
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="https://github.com/purplechildren" target="_blank" title="GitHub">
+                      
+                        <i class="fa fa-fw fa-globe"></i>GitHub</a>
+                  </span>
+                
+            </div>
+          
 
           
           
@@ -602,7 +641,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#next主主题装上了，但是初始页面，真的一般般，一颗躁动的心就开始造作了！"><span class="nav-number">1.</span> <span class="nav-text">next主主题装上了，但是初始页面，真的一般般，一颗躁动的心就开始造作了！</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-左上角丝带展示效果-amp-fork-me-on-github"><span class="nav-number">2.</span> <span class="nav-text">1. 左上角丝带展示效果&amp;fork me on github</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-添加动态粒子背景即增加自定义js模块"><span class="nav-number">3.</span> <span class="nav-text">2. 添加动态粒子背景即增加自定义js模块</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#小结"><span class="nav-number">3.1.</span> <span class="nav-text">小结</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-修改文章内链的样式即修改css样式"><span class="nav-number">4.</span> <span class="nav-text">3. 修改文章内链的样式即修改css样式</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#小结-1"><span class="nav-number">4.1.</span> <span class="nav-text">小结</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-在每篇文章末尾增加本文结束的标记，即为文章增加dom"><span class="nav-number">5.</span> <span class="nav-text">4.在每篇文章末尾增加本文结束的标记，即为文章增加dom</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5-在网站底部增加访问量，即引用next相关插件"><span class="nav-number">6.</span> <span class="nav-text">5.在网站底部增加访问量，即引用next相关插件</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#6-在文章底部增加版权信息"><span class="nav-number">7.</span> <span class="nav-text">6.在文章底部增加版权信息</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#next主主题装上了，但是初始页面，真的一般般，一颗躁动的心就开始造作了！"><span class="nav-number">1.</span> <span class="nav-text">next主主题装上了，但是初始页面，真的一般般，一颗躁动的心就开始造作了！</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-左上角丝带展示效果-amp-fork-me-on-github"><span class="nav-number">2.</span> <span class="nav-text">1. 左上角丝带展示效果&amp;fork me on github</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-添加动态粒子背景即增加自定义js模块"><span class="nav-number">3.</span> <span class="nav-text">2. 添加动态粒子背景即增加自定义js模块</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#小结"><span class="nav-number">3.1.</span> <span class="nav-text">小结</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-修改文章内链的样式即修改css样式"><span class="nav-number">4.</span> <span class="nav-text">3. 修改文章内链的样式即修改css样式</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#小结-1"><span class="nav-number">4.1.</span> <span class="nav-text">小结</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-在每篇文章末尾增加本文结束的标记，即为文章增加dom"><span class="nav-number">5.</span> <span class="nav-text">4.在每篇文章末尾增加本文结束的标记，即为文章增加dom</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5-在网站底部增加访问量，即引用next相关插件"><span class="nav-number">6.</span> <span class="nav-text">5.在网站底部增加访问量，即引用next相关插件</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#6-在文章底部增加版权信息"><span class="nav-number">7.</span> <span class="nav-text">6.在文章底部增加版权信息</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#7-代码块自定义样式"><span class="nav-number">8.</span> <span class="nav-text">7.代码块自定义样式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#8-侧边栏社交，及小图标的增加"><span class="nav-number">9.</span> <span class="nav-text">8.侧边栏社交，及小图标的增加</span></a></li></ol></div>
             
 
           </div>
@@ -660,7 +699,7 @@
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共5.2k字</span>
+  <span class="post-count">博客全站共5.3k字</span>
 </div>
 
 

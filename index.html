@@ -318,7 +318,7 @@
                   <span class="post-meta-item-text">Reading time &asymp;</span>
                 
                 <span title="Reading time">
-                  10
+                  11
                 </span>
               
             </div>
@@ -373,8 +373,11 @@
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">在文件next/source/css/_common/components/post/post.styl的末尾调用stl文件，如下：</span><br><span class="line">@import “my-post-copyright”</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>在写博客的时候，Markdown文件的头部信息里面，将copyright引用</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">copyright: true    //记得空格</span><br></pre></td></tr></table></figure></li>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">copyright: true    //记得空格</span><br></pre></td></tr></table></figure>
+</li>
 </ul>
+<h2 id="7-代码块自定义样式"><a href="#7-代码块自定义样式" class="headerlink" title="7.代码块自定义样式"></a>7.代码块自定义样式</h2><p>打开\themes\next\source\css_custom\custom.styl,向里面加入：(颜色可以自己定义)<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">// Custom styles.</span><br><span class="line">code &#123;</span><br><span class="line">    color: #ff7600;</span><br><span class="line">    background: #fbf7f8;</span><br><span class="line">    margin: 2px;</span><br><span class="line">&#125;</span><br><span class="line">// 大代码块的自定义样式</span><br><span class="line">.highlight, pre &#123;</span><br><span class="line">    margin: 5px 0;</span><br><span class="line">    padding: 5px;</span><br><span class="line">    border-radius: 3px;</span><br><span class="line">&#125;</span><br><span class="line">.highlight, code, pre &#123;</span><br><span class="line">    border: 1px solid #d6d6d6;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<h2 id="8-侧边栏社交，及小图标的增加"><a href="#8-侧边栏社交，及小图标的增加" class="headerlink" title="8.侧边栏社交，及小图标的增加"></a>8.侧边栏社交，及小图标的增加</h2><p>修改配置文件_config.yml<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">social:</span><br><span class="line">	GitHub: https://github.com/purplechildren</span><br><span class="line"></span><br><span class="line">social-icons:</span><br><span class="line">	enable: true</span><br><span class="line">	GitHub: github</span><br></pre></td></tr></table></figure></p>
 
           
         
@@ -944,6 +947,16 @@ $ git -d branch dev    //删除分支dev
           
 
           
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="https://github.com/purplechildren" target="_blank" title="GitHub">
+                      
+                        <i class="fa fa-fw fa-globe"></i>GitHub</a>
+                  </span>
+                
+            </div>
+          
 
           
           
@@ -1008,7 +1021,7 @@ $ git -d branch dev    //删除分支dev
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共5.2k字</span>
+  <span class="post-count">博客全站共5.3k字</span>
 </div>
 
 
