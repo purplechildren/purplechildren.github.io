@@ -1218,6 +1218,9 @@ pre .javascript .function {
 .use-motion .menu-item {
   opacity: 0;
 }
+body {
+  background: url("http://pic.58pic.com/58pic/14/99/40/72C58PICJDZ_1024.jpg") !important;
+}
 .post-body {
   font-family: 'Lato', "PingFang SC", "Microsoft YaHei", sans-serif;
 }
@@ -1265,6 +1268,17 @@ pre .javascript .function {
 }
 .use-motion .collection-title {
   opacity: 0;
+}
+.post-body p a {
+  color: #0593d3;
+  border-bottom: none;
+  border-bottom: 1px solid #0593d3;
+}
+.post-body p a:hover {
+  color: #fc6423;
+  border-bottom: none;
+  border-bottom: 1px solid #fc6423;
+  text-shadow: 0 0 2px #0593d3;
 }
 .posts-expand {
   padding-top: 40px;
@@ -1822,7 +1836,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #5424ff;
+  background: #b3bb74;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -2659,4 +2673,11 @@ embed {
 }
 .links-of-blogroll-inline .links-of-blogroll-item {
   display: inline-block;
+}
+.post {
+  margin-top: 60px;
+  margin-bottom: 60px;
+  padding: 25px;
+  -webkit-box-shadow: 0 0 5px rgba(202,203,203,0.5);
+  -moz-box-shadow: 0 0 5px rgba(202,203,204,0.5);
 }
