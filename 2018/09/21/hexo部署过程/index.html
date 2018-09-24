@@ -5,7 +5,7 @@
   
 
 
-<html class="theme-next muse use-motion" lang="">
+<html class="theme-next muse use-motion" lang="zh-Hans">
 <head>
   <meta charset="UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -79,18 +79,18 @@
 
 
 
-<meta name="description" content="hexo部署的心酸历程 首先建立在电脑已经安装了git，node并且在github上已经有了账号，并且成功匹配了ssh key。 建立一个新的空的仓库，名字为 yourname.github.io 在本地电脑上新建一个文件夹，作为hexo的本地路径，我的是myblog 开始在电脑上安装hexo  1npm install hexo -g PS:-这里发现一个有意思的事情，我第一次切换next主题的">
+<meta name="description" content="hexo部署的心酸历程 首先建立在电脑已经安装了git，node并且在github上已经有了账号，并且成功匹配了ssh key。 建立一个新的空的仓库，名字为 yourname.github.io 在本地电脑上新建一个文件夹，作为hexo的本地路径，我的是myblog 开始在电脑上安装hexo">
 <meta name="keywords" content="git,hexo">
 <meta property="og:type" content="article">
 <meta property="og:title" content="hexo部署过程">
 <meta property="og:url" content="http://yoursite.com/2018/09/21/hexo部署过程/index.html">
 <meta property="og:site_name" content="紫衣小生的博客">
-<meta property="og:description" content="hexo部署的心酸历程 首先建立在电脑已经安装了git，node并且在github上已经有了账号，并且成功匹配了ssh key。 建立一个新的空的仓库，名字为 yourname.github.io 在本地电脑上新建一个文件夹，作为hexo的本地路径，我的是myblog 开始在电脑上安装hexo  1npm install hexo -g PS:-这里发现一个有意思的事情，我第一次切换next主题的">
-<meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-09-21T13:44:55.600Z">
+<meta property="og:description" content="hexo部署的心酸历程 首先建立在电脑已经安装了git，node并且在github上已经有了账号，并且成功匹配了ssh key。 建立一个新的空的仓库，名字为 yourname.github.io 在本地电脑上新建一个文件夹，作为hexo的本地路径，我的是myblog 开始在电脑上安装hexo">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2018-09-23T01:45:36.266Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="hexo部署过程">
-<meta name="twitter:description" content="hexo部署的心酸历程 首先建立在电脑已经安装了git，node并且在github上已经有了账号，并且成功匹配了ssh key。 建立一个新的空的仓库，名字为 yourname.github.io 在本地电脑上新建一个文件夹，作为hexo的本地路径，我的是myblog 开始在电脑上安装hexo  1npm install hexo -g PS:-这里发现一个有意思的事情，我第一次切换next主题的">
+<meta name="twitter:description" content="hexo部署的心酸历程 首先建立在电脑已经安装了git，node并且在github上已经有了账号，并且成功匹配了ssh key。 建立一个新的空的仓库，名字为 yourname.github.io 在本地电脑上新建一个文件夹，作为hexo的本地路径，我的是myblog 开始在电脑上安装hexo">
 
 
 
@@ -106,7 +106,7 @@
     motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
     duoshuo: {
       userId: '0',
-      author: 'Author'
+      author: '博主'
     },
     algolia: {
       applicationID: '',
@@ -138,7 +138,7 @@
 
 </head>
 
-<body itemscope itemtype="http://schema.org/WebPage" lang="default">
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
 
   
   
@@ -187,7 +187,37 @@
             
               <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
             
-            Home
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
           </a>
         </li>
       
@@ -197,7 +227,7 @@
             
               <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
             
-            Archives
+            归档
           </a>
         </li>
       
@@ -261,9 +291,9 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">Posted on</span>
+                <span class="post-meta-item-text">发表于</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-09-21T14:15:35+08:00">
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-09-21T14:15:35+08:00">
                 2018-09-21
               </time>
             
@@ -282,7 +312,7 @@
                 <i class="fa fa-folder-o"></i>
               </span>
               
-                <span class="post-meta-item-text">In</span>
+                <span class="post-meta-item-text">分类于</span>
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
@@ -317,9 +347,9 @@
                   <i class="fa fa-clock-o"></i>
                 </span>
                 
-                  <span class="post-meta-item-text">Reading time &asymp;</span>
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
-                <span title="Reading time">
+                <span title="阅读时长">
                   2
                 </span>
               
@@ -347,6 +377,7 @@
 <li>在本地电脑上新建一个文件夹，作为hexo的本地路径，我的是myblog</li>
 <li>开始在电脑上安装hexo</li>
 </ol>
+<a id="more"></a>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo -g</span><br></pre></td></tr></table></figure>
 <p>PS:<br>-这里发现一个有意思的事情，我第一次切换next主题的时候本地和线上的不一致，然后一怒之下全部都给删了，然后就各种报错。<br>-然后决定了！整个全部摧毁，推倒重来。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">-npm uninstall hexo -g 直接从系统上卸载hexo，这里的 -g 是必须的。</span><br></pre></td></tr></table></figure></p>
 <p>安装完成以后         hexo -v        可以查看当前版本是否安装成功了</p>
@@ -400,7 +431,7 @@
   <p><span>本文标题:</span><a href="/2018/09/21/hexo部署过程/">hexo部署过程</a></p>
   <p><span>文章作者:</span><a href="/" title="访问 Purplechild 的个人博客">Purplechild</a></p>
   <p><span>发布时间:</span>2018年09月21日 - 14:09</p>
-  <p><span>最后更新:</span>2018年09月21日 - 21:09</p>
+  <p><span>最后更新:</span>2018年09月23日 - 09:09</p>
   <p><span>原始链接:</span><a href="/2018/09/21/hexo部署过程/" title="hexo部署过程">http://yoursite.com/2018/09/21/hexo部署过程/</a>
     <span class="copy-path"  title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="http://yoursite.com/2018/09/21/hexo部署过程/"  aria-label="复制成功！"></i></span>
   </p>
@@ -451,9 +482,9 @@
       
         <div class="post-tags">
           
-            <a href="/tags/git/" rel="tag"># git</a>
+            <a href="/tags/git/" rel="tag"><i class="fa fa-tag"></i> git</a>
           
-            <a href="/tags/hexo/" rel="tag"># hexo</a>
+            <a href="/tags/hexo/" rel="tag"><i class="fa fa-tag"></i> hexo</a>
           
         </div>
       
@@ -554,10 +585,10 @@ var jiathis_config={
       
         <ul class="sidebar-nav motion-element">
           <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
-            Table of Contents
+            文章目录
           </li>
           <li class="sidebar-nav-overview" data-target="site-overview-wrap">
-            Overview
+            站点概览
           </li>
         </ul>
       
@@ -578,7 +609,7 @@ var jiathis_config={
                 <a href="/archives/">
               
                   <span class="site-state-item-count">3</span>
-                  <span class="site-state-item-name">posts</span>
+                  <span class="site-state-item-name">日志</span>
                 </a>
               </div>
             
@@ -589,7 +620,7 @@ var jiathis_config={
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
                   <span class="site-state-item-count">2</span>
-                  <span class="site-state-item-name">categories</span>
+                  <span class="site-state-item-name">分类</span>
                 </a>
               </div>
             
@@ -600,7 +631,7 @@ var jiathis_config={
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
                   <span class="site-state-item-count">3</span>
-                  <span class="site-state-item-name">tags</span>
+                  <span class="site-state-item-name">标签</span>
                 </a>
               </div>
             
@@ -684,7 +715,7 @@ var jiathis_config={
 </div>
 
 
-  <div class="powered-by">Powered by <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a></div>
+  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
 
 
 
@@ -692,7 +723,7 @@ var jiathis_config={
 
 <!-- 
 
-  <div class="theme-info">Theme &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Muse</a> v5.1.4</div>
+  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Muse</a> v5.1.4</div>
 
 
  -->
@@ -700,7 +731,7 @@ var jiathis_config={
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共5.3k字</span>
+  <span class="post-count">博客全站共5.4k字</span>
 </div>
 
 
