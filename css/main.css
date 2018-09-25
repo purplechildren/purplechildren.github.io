@@ -1219,10 +1219,12 @@ pre .javascript .function {
   opacity: 0;
 }
 body {
-  background: url("http://file05.16sucai.com/2015/0727/bf6c015df1ca1c9df5ef859ceb3aa9fd.jpg") !important;
+  background: url("http://pic.58pic.com/58pic/15/82/19/32A58PICuT4_1024.jpg") !important;
+  background-size: 100%;
 }
 .post-body {
   font-family: 'Lato', "PingFang SC", "Microsoft YaHei", sans-serif;
+  color: #3f3f3f;
 }
 @media (max-width: 767px) {
   .post-body {
@@ -1281,7 +1283,8 @@ body {
   text-shadow: 0 0 2px #0593d3;
 }
 .posts-expand {
-  padding-top: 40px;
+  padding-top: 20px;
+  background: rgba(255,255,255,0.5);
 }
 @media (max-width: 767px) {
   .posts-expand {
@@ -1836,7 +1839,7 @@ body {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #4003ff;
+  background: #f24781;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -1958,7 +1961,7 @@ body {
 }
 .footer {
   font-size: 14px;
-  color: #999;
+  color: #3f3f3f;
 }
 .footer img {
   border: none;
