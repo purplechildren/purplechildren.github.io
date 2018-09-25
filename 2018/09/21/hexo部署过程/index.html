@@ -87,7 +87,7 @@
 <meta property="og:site_name" content="紫衣小生的博客">
 <meta property="og:description" content="hexo部署的心酸历程 首先建立在电脑已经安装了git，node并且在github上已经有了账号，并且成功匹配了ssh key。 建立一个新的空的仓库，名字为 yourname.github.io 在本地电脑上新建一个文件夹，作为hexo的本地路径，我的是myblog 开始在电脑上安装hexo">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-09-23T01:45:36.266Z">
+<meta property="og:updated_time" content="2018-09-25T09:10:34.171Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="hexo部署过程">
 <meta name="twitter:description" content="hexo部署的心酸历程 首先建立在电脑已经安装了git，node并且在github上已经有了账号，并且成功匹配了ssh key。 建立一个新的空的仓库，名字为 yourname.github.io 在本地电脑上新建一个文件夹，作为hexo的本地路径，我的是myblog 开始在电脑上安装hexo">
@@ -350,7 +350,7 @@
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
                 <span title="阅读时长">
-                  2
+                  3
                 </span>
               
             </div>
@@ -409,7 +409,13 @@
 <li>把刚写的这个文章，添加到新的博客上，嘚瑟一下呗！</li>
 </ol>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo add post &quot;hexo部署过程中的心酸历程&quot;</span><br></pre></td></tr></table></figure>
-<p>13.下载next主题文件<a href="https://github.com/iissnan/hexo-theme-next/releases" target="_blank" rel="noopener">下载</a></p>
+<ol start="13">
+<li><p>安装上传图片插件：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">把主页配置文件_config.yml 里的post_asset_folder:这个选项设置为true</span><br><span class="line">在你的hexo目录下执行这样一句话npm install hexo-asset-image --save，这是下载安装一个可以上传本地图片的插件，来自dalao：dalao的git</span><br><span class="line">等待一小段时间后，再运行hexo n &quot;xxxx&quot;来生成md博文时，/source/_posts文件夹内除了xxxx.md文件还有一个同名的文件夹</span><br><span class="line">最后在xxxx.md中想引入图片时，先把图片复制到xxxx这个文件夹中，然后只需要在xxxx.md中按照markdown的格式引入图片：</span><br><span class="line">![你想输入的替代文字](xxxx/图片名.jpg)</span><br><span class="line">注意： xxxx是这个md文件的名字，也是同名文件夹的名字。只需要有文件夹名字即可，不需要有什么绝对路径。你想引入的图片就只需要放入xxxx这个文件夹内就好了，很像引用相对路径。</span><br><span class="line">最后检查一下，hexo g生成页面后，进入public\2017\02\26\index.html文件中查看相关字段，可以发现，html标签内的语句是&lt;img src=&quot;2017/02/26/xxxx/图片名.jpg&quot;&gt;，而不是&lt;img src=&quot;xxxx/图片名.jpg&gt;。这很重要，关乎你的网页是否可以真正加载你想插入的图片。</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>下载next主题文件<a href="https://github.com/iissnan/hexo-theme-next/releases" target="_blank" rel="noopener">下载</a></p>
+</li>
+</ol>
 
       
     </div>
@@ -431,7 +437,7 @@
   <p><span>本文标题:</span><a href="/2018/09/21/hexo部署过程/">hexo部署过程</a></p>
   <p><span>文章作者:</span><a href="/" title="访问 Purplechild 的个人博客">Purplechild</a></p>
   <p><span>发布时间:</span>2018年09月21日 - 14:09</p>
-  <p><span>最后更新:</span>2018年09月23日 - 09:09</p>
+  <p><span>最后更新:</span>2018年09月25日 - 17:09</p>
   <p><span>原始链接:</span><a href="/2018/09/21/hexo部署过程/" title="hexo部署过程">http://purplechildren.github.io/2018/09/21/hexo部署过程/</a>
     <span class="copy-path"  title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="http://purplechildren.github.io/2018/09/21/hexo部署过程/"  aria-label="复制成功！"></i></span>
   </p>
@@ -731,7 +737,7 @@ var jiathis_config={
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共7.3k字</span>
+  <span class="post-count">博客全站共7.7k字</span>
 </div>
 
 
