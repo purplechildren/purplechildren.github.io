@@ -87,7 +87,7 @@
 <meta property="og:site_name" content="紫衣小生">
 <meta property="og:description" content="整理一些平常工作中的js小插件吧！虽然简单，但是拿来复制粘贴还是不错的！ ^_^ 目录 判断当前鼠标事件是否在dom对象内部 比较两个数组的不同 查看对象是否在数组内">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-10-01T09:52:06.176Z">
+<meta property="og:updated_time" content="2018-10-01T10:02:02.373Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="JS常用的一些功能插件">
 <meta name="twitter:description" content="整理一些平常工作中的js小插件吧！虽然简单，但是拿来复制粘贴还是不错的！ ^_^ 目录 判断当前鼠标事件是否在dom对象内部 比较两个数组的不同 查看对象是否在数组内">
@@ -383,7 +383,7 @@
 <h3 id="比较两个数组的不同，相同的删除"><a href="#比较两个数组的不同，相同的删除" class="headerlink" title="比较两个数组的不同，相同的删除"></a>比较两个数组的不同，相同的删除</h3><p>这个是项目中经常遇到的，原生的没有找到这个方法，就自己写了一个<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">Array.prototype.duibiArr = function(arr) &#123;</span><br><span class="line">	for (var i= 0; i &lt; this.length; i++) &#123;</span><br><span class="line">		for (var j=0; j&lt; arr.length; j++) &#123;</span><br><span class="line">			if (this[i] == arr[j]) &#123;</span><br><span class="line">				this.splice(i, 1);</span><br><span class="line">				arr.splice(j, 1);</span><br><span class="line">				this.duibiArr(arr);</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	var obj= &#123;</span><br><span class="line">		oldarr: this,	//原数组剩下的</span><br><span class="line">		newarr: arr	//新数组剩下的</span><br><span class="line">	&#125;</span><br><span class="line">	return obj;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
 <p>使用方法：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">var oldarr= [2,3,4,5];</span><br><span class="line">var newarr= [0,1,2,3];</span><br><span class="line">var obj= oldarr.duibiArr(newarr);</span><br><span class="line">//  obj == &#123;</span><br><span class="line">//	 oldarr: [4,5],</span><br><span class="line">//	 newarr: [0,1]</span><br><span class="line">// &#125;</span><br></pre></td></tr></table></figure></p>
 <p>同样在这个基础上可以增加相同的个数和不同的个数之类的统计。</p>
-<h3 id="查看对象是否在数组内"><a href="#查看对象是否在数组内" class="headerlink" title="查看对象是否在数组内"></a>查看对象是否在数组内</h3><p>忽然想写一个贪吃蛇玩玩（<code>canvas</code>），在过程中，每次需要重新生成一个食物的坐标，但是js原生中的<code>indexof()</code>，测试了好多次都是回复-1，查了一会资料没有找到原因，所以就写了一下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">Array.prototype.ifhas= function(con)&#123;</span><br><span class="line">	for (var i=0;i&lt; this.length;i++) &#123;</span><br><span class="line">		if(con.x == this[i].x &amp;&amp; con.y== this[i].y)&#123;</span><br><span class="line">			return true;	</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	return false;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure></p>
+<h3 id="查看对象是否在数组内"><a href="#查看对象是否在数组内" class="headerlink" title="查看对象是否在数组内"></a>查看对象是否在数组内</h3><p>忽然想写一个贪吃蛇玩玩（<code>canvas</code>），在过程中，每次需要重新生成一个食物的坐标，但是js原生中的<code>indexof()</code>不行，所以就写了一下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">Array.prototype.ifhas= function(con)&#123;</span><br><span class="line">	for (var i=0;i&lt; this.length;i++) &#123;</span><br><span class="line">		if(con.x == this[i].x &amp;&amp; con.y== this[i].y)&#123;</span><br><span class="line">			return true;	</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	return false;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure></p>
 <p>使用方法：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">var obj= &#123;x:1,y:1&#125;;</span><br><span class="line">var arr= [</span><br><span class="line">	&#123;x:1,y:1&#125;,</span><br><span class="line">	&#123;x:1,y:2&#125;,</span><br><span class="line">	&#123;x:1,y:3&#125;</span><br><span class="line">];</span><br><span class="line">arr.ifhas(obj);	//true</span><br></pre></td></tr></table></figure></p>
 <p>当然因为我查找的是只有两个属性，所以用的是分支语句，如果属性多的话，可能就不太合适了。需要看实际情况来做，我能想到的就是，如果属性数量不多，可以用循环，如果更多的话，分两步，先把<code>key</code>循环一遍，排除<code>key</code>不一样的，然后在对比值。节省一点资源。</p>
 <h2 id="持续更新ing"><a href="#持续更新ing" class="headerlink" title="持续更新ing"></a>持续更新ing</h2>
@@ -407,7 +407,7 @@
   <p><span>本文标题:</span><a href="/2018/09/25/JS常用的一些功能插件/">JS常用的一些功能插件</a></p>
   <p><span>文章作者:</span><a href="/" title="访问 Purplechild 的个人博客">Purplechild</a></p>
   <p><span>发布时间:</span>2018年09月25日 - 14:09</p>
-  <p><span>最后更新:</span>2018年10月01日 - 17:10</p>
+  <p><span>最后更新:</span>2018年10月01日 - 18:10</p>
   <p><span>原始链接:</span><a href="/2018/09/25/JS常用的一些功能插件/" title="JS常用的一些功能插件">http://purplechildren.github.io/2018/09/25/JS常用的一些功能插件/</a>
     <span class="copy-path"  title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="http://purplechildren.github.io/2018/09/25/JS常用的一些功能插件/"  aria-label="复制成功！"></i></span>
   </p>
@@ -711,7 +711,7 @@ var jiathis_config={
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共9.5k字</span>
+  <span class="post-count">博客全站共9.4k字</span>
 </div>
 
 
