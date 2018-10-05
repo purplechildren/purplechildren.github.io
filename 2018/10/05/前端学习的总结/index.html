@@ -1,0 +1,908 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next muse use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="web前端," />
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="抛弃原来专业，步入计算机行业，已经马上三年了，最近感觉学习遇到了瓶颈。会的东西不少，由于这样的那样的借口，从来没有把自己会或者不会的东西重头到尾的梳理一遍。也只有国庆长假能给这么一段时间，让自己放空一下，静静的回想一下这三年来所有的过程了。">
+<meta name="keywords" content="web前端">
+<meta property="og:type" content="article">
+<meta property="og:title" content="前端学习的总结">
+<meta property="og:url" content="http://purplechildren.github.io/2018/10/05/前端学习的总结/index.html">
+<meta property="og:site_name" content="紫衣小生">
+<meta property="og:description" content="抛弃原来专业，步入计算机行业，已经马上三年了，最近感觉学习遇到了瓶颈。会的东西不少，由于这样的那样的借口，从来没有把自己会或者不会的东西重头到尾的梳理一遍。也只有国庆长假能给这么一段时间，让自己放空一下，静静的回想一下这三年来所有的过程了。">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2018-10-05T17:58:49.821Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="前端学习的总结">
+<meta name="twitter:description" content="抛弃原来专业，步入计算机行业，已经马上三年了，最近感觉学习遇到了瓶颈。会的东西不少，由于这样的那样的借口，从来没有把自己会或者不会的东西重头到尾的梳理一遍。也只有国庆长假能给这么一段时间，让自己放空一下，静静的回想一下这三年来所有的过程了。">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Muse',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://purplechildren.github.io/2018/10/05/前端学习的总结/"/>
+
+
+
+
+
+  <title>前端学习的总结 | 紫衣小生</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+		<a href="https://github.com/purplechildren">
+		<img style="position: absolute; top: 0; left: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_left_red_aa0000.png" alt="Fork me on GitHub"></a>
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">紫衣小生</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">最简单的问题往往最容易被忽略</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://purplechildren.github.io/2018/10/05/前端学习的总结/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Purplechild">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="紫衣小生">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">前端学习的总结</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-10-05T21:51:44+08:00">
+                2018-10-05
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/web前端/" itemprop="url" rel="index">
+                    <span itemprop="name">web前端</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">
+                  20
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>抛弃原来专业，步入计算机行业，已经马上三年了，最近感觉学习遇到了瓶颈。<br>会的东西不少，由于这样的那样的借口，从来没有把自己会或者不会的东西重头到尾的梳理一遍。也只有国庆长假能给这么一段时间，让自己放空一下，静静的回想一下这三年来所有的过程了。<br><a id="more"></a></p>
+<h3 id="入坑之前"><a href="#入坑之前" class="headerlink" title="入坑之前"></a>入坑之前</h3><p>记得还是三年前，刚毕业不久，从另一个行业刚离职，到北京工作，找了一段时间工作以后，发现原来的专业所对口的工作，并不是自己喜欢的工作内容。然后跟朋友聊天，便推荐我学计算机，因为我做事思路清晰，挺喜欢钻研，而且这个行业也刚好在当时是一个高大上的工作，试想一下如果可以像电影里面的黑客一样，敲几行代码就可以为所欲为；再近一点，现在社会已经步入互联网社会，做计算机相关的，肯定比其他行业更能把握这个社会的发展风向。对自己日后的发展也是很有帮助的呀！<br>于是乎，就听从了他们的建议，但是摆在面前的又是一大堆的选择：<code>UI设计</code>、<code>web前端</code>、<code>H5</code>、<code>Android</code>、<code>iOS</code>、<code>PHP</code>、<code>java</code>、<code>c/c++</code>、<code>python</code>…<br>我的天，这么多一个个的专业词汇摆在面前，而我只停留在会用办公软件，以及对VB的一丝了解，哦，对了，还会玩各种游戏。从来没有了解过这些名词所对应的专业知识，做选择，怎么做啊？<br>然后就只能找已经从事，或者了解这方面的内容的前辈来了解一下了。<br>他们对我说，安卓和ios就别考虑了，java学的人都烂大街了（当然现在也还有好多初学者开始学习），c和Python入门门槛比较高，没有基础的话不太好，你可以去看看刚兴起的H5，这个最近挺火的！问了几个人，都给出了这个类似的结果，原因就是我基础太差了。 T_T<br>然后，就开始了学习之旅。报了一个班。<br>学习的过程用一句话来说就是，痛苦并快乐着。刚开始接触一脸懵逼然后跟着代码一行行敲，看着代码一个个理解然后记忆再把它变成顺手就能敲出来的工具，这其中的滋味只有经历过的才能明白了。</p>
+<h3 id="什么是前端？就是前端啊-！"><a href="#什么是前端？就是前端啊-！" class="headerlink" title="什么是前端？就是前端啊 ！"></a>什么是前端？就是前端啊 ！</h3><p>不如问，前端能是干什么的？到现在我也没有一个准确的定义。但是现在的我可以这么说，所有带屏幕的设备上，你一眼能看到的内容，大都是前端的工作成果。大到Google、百度，小到单机测评，只要你能看到，都是前端对数据进行渲染做到的。（如果抬杠说，java和php可以生成数据流直接展示，我也不辩驳，因为html并不是前端的专属，但是是你们的潜意识里把html方面的bug推给前端的）<br>准确的来说，到目前为止，前端的使用的代码主要有三大块：<code>html</code>、<code>javascript</code>、<code>css</code>。（当然如果非要把html5、css3、jq都给数出来的话，我就不陪你数了，因为单单一个js就可以数一个晚上了）<br>前端的主要职责就是，通过参与设计制作所有能看到的界面（页面），然后由用户进行操作（交互），跟后台（或者我经常用的一个词“服务器端”）进行数据交流，然后对数据进行渲染，在呈现一个新的界面给用户，使用户享受到舒适的使用体验。日常工作就是写页面，然后跟后台进行数据对接，测试，然后循环往复。<br>综上所述，这就是现在我认为的前端。<br>但是回想起刚入坑的时候，什么是前端？就是前端啊！（问这么白痴的问题…）前端要学什么？学前端啊！（问这么白痴的问题…）前端是做什么的？做前端啊！（问这么白痴的问题…） T_T</p>
+<h3 id="html"><a href="#html" class="headerlink" title="html"></a>html</h3><p>刚接触的时候，印象特别深刻！<br>记得那时一个大晴天的下午，刚进一个教室，带我们（还有一个是我同学）进去听一下老师讲基础，然后老师就开始说：“大家在桌面上新建一个记事本文件。然后打开它，跟着我一起输入<code>&lt;html&gt;&lt;/html&gt;</code>,然后在里面写<code>&lt;head&gt;&lt;/head&gt;&lt;body&gt;&lt;/body&gt;</code>,然后在<code>body</code>里面写<code>&lt;h1&gt;Hello World!&lt;/h1&gt;</code>,然后保存。现在把它关掉，把后缀改成<code>html</code>然后打开…”。打开以后就是很惊讶的表情，我当时的基础大概就是这个样子的。“哇，刚才还是乱七八糟的东西，现在就变成一行字了，而且是一个网站！！！”，当时的真实写照。再然后，又给说了一些经常用的标签，<code>h2</code>、<code>h3</code>、<code>h4</code>、<code>h5</code>、<code>h6</code>、<code>ul</code>、<code>ol</code>、<code>li</code>、<code>hr</code>,然后用行内<code>style</code>修改了一下字体颜色，还有<code>hr</code>的宽度和颜色，一节课居然就过去了？自高中以后，除了玩游戏没有感觉时间过得比这个更快了。我当时就决定要搞这个了！<br>然后就开始了一段时间的学习，开始慢慢认识了更多的标签。并且慢慢的把他们的特点记住，并灵活运用。<br>比如<code>form</code>表单，里面各种各样的输入框选择框，还有按钮。<code>table</code>表格，里面各行各列然后跨行跨列，表头标题。有序列表、无序列表、定义列表，当然还有<code>div</code>、<code>p</code>、<code>a</code>、<code>span</code>、<code>img</code>…。然后到h5里面增加了新的元素和更多语义化标签就不一一去数了，但是有一个不得不说的神奇标签就是现在不怎么用了的<code>iframe</code>了，很威武霸气的。<br>直到有一天，换了一台电脑，忽然发现写的汉字，全部都是乱码？一个个的火星文，一脸懵逼。<br>这才知道，原来<code>head</code>不是个花架子了，里面是可以写东西的，而且写的东西很重要！<br>下面是我以前用过的一个<code>head</code>,简单兼容移动端和其他终端的。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">&lt;head&gt;</span><br><span class="line">	&lt;meta charset=&quot;utf-8&quot;&gt;	//编码声明</span><br><span class="line">	&lt;meta http-equiv=&quot;X-UA-Compatible&quot; content=&quot;IE=edge,chrome=1&quot;&gt;	//优先使用IE最新版本和Chrome</span><br><span class="line">	&lt;meta name=&quot;viewport&quot; content=&quot;initial-scale=1,maximum-scale=3,minimum-scale=0.1&quot;&gt;	//缩放</span><br><span class="line">	&lt;meta http-equiv=&quot;Cache-Control&quot; content=&quot;no-siteapp&quot;&gt;	//禁止百度转码</span><br><span class="line">	&lt;meta name=&quot;keywords&quot; content=&quot;your keywords&quot;&gt;	//页面关键词,多个关键词用英文逗号隔开</span><br><span class="line">	&lt;meta name=&quot;description&quot; content=&quot;your description&quot;&gt;	//页面描述内容</span><br><span class="line">	&lt;meta name=&quot;author&quot; content=&quot;author, email address&quot;&gt;	//作者</span><br><span class="line">	&lt;title&gt;your title&lt;/title&gt;	//页面标题标签</span><br><span class="line">&lt;/head&gt;</span><br></pre></td></tr></table></figure></p>
+<p>还有一些其他的根据实际情况<code>兼容iOS和其他屏幕尺寸</code>，或者更多功能的，百度可以百度出来好几页，就不往过搬了。<br>这里就可以配合<code>css</code>写一些静态页面了，直到后来有一天。他们说页面只要一个空的<code>body</code>然后所有html都是在其他语言里面算出来的，当时这么理解的：“算出html代码？天方夜谭啊！”，然后才知道原来真的可以实现，只要保证最终结果和你要的效果一样就OK了，然后就是先在页面上写好效果，然后在关键数据部分用特殊标记记录下来，然后把数据填进去，后台直接返回一个拼接出来的页面。这个页面的后缀已经不是html了，变成了一堆零散的零件！！！哇，又学到了！当时就在想，其实html语言只是一个规则，只要能让浏览器认识（解释器识别），就可以了，完全没有必要一板一眼的去写他。这些想法在后来的vue的学习中也得到了实现，因为他的组件全是<code>.vue</code>作为后缀。工作中自己还尝试着写了<code>.common</code>、<code>.page</code>这些固定样式的组件，用<code>load</code>进行加载，然后修改里面关键数据，省了好几百行没用的代码。当时就感觉牛*炸了！后来才发现其实并没有什么卵用，只不过是花里胡哨的方便一下阅读这一个优点而已，而且文件布局反而麻烦了…单不管怎么说，总归还是尝试了一下不是？<br>再然后，就开始接触<code>vue</code>、<code>angular</code>了，最先使用的时候是在<code>html</code>直接调用一个<code>js</code>用里面的方法进行数据的绑定和事件的运行，第一感觉就是，这tm什么玩意儿啊，为了绑定个数据反而引入一个好几百k的框架，这是为了增加用户体验呢，还是为了赚用户流量呢？然后了解了<code>node</code>，在<code>node</code>环境下再返回来部署<code>vue</code>，哇！不一样了，把一个<code>html</code>拆分成一个个组件，就好像是一块块积木，想怎么组装就怎么组装，然后组件之间进行通讯，太棒了，原来这才是他们的真实目的啊，一开始错怪它了。<br>到这个时候，也就是现在这个时候，眼里已经没有<code>html</code>结构那种概念了！说个最简单的，你直接把一个<code>div</code>保存为<code>html</code>，用浏览器打开，照样是一个网页！就是这么神奇…<br>到现在，我理解的html是这个样子的：</p>
+<p>不管你怎么写，html里面的标签分为三类：<br>第一类是说明规则的或者附属信息的，就是<head>里面的内容和注释内容，这些内容并没有在页面内容里展现，但是却实实在在的或者解释这个网站或者解释代码意义，或者控制页面效果。<br>第二类是块级标签：<code>&lt;div&gt;、&lt;p&gt;、&lt;h1&gt;…&lt;h6&gt;、&lt;ol&gt;、&lt;ul&gt;、&lt;li&gt;、&lt;address&gt;、&lt;blockquote&gt;、&lt;form&gt;等等</code>这类标签其实总的来说就是一个div衍生出来的（除了一些特殊的标签麻烦一点），如果你有兴趣，你可以只用任何一个标签写完一整个页面，包括输入框，按钮，等等。<br>第三类是行内标签：<code>&lt;a&gt;、&lt;span&gt;、&lt;i&gt;、&lt;em&gt;、&lt;strong&gt;、&lt;label&gt;、&lt;q&gt;、&lt;var&gt;、&lt;cite&gt;、&lt;code&gt;</code><br>1.行属性标签它和其它标签处在同一行内<br>2.行属性标签无法设置宽度，高度 行高 距顶部距离 距底部距离<br>3.行属性标签的宽度是直接由内部的文字或者图片等内容撑开的<br>4.行属性标签内部不能嵌套行属性标签（a链接内不能嵌套其他链接）<br>还有一些被称为行内块标签：img,input,textarea<br>当然，如果搭配js和css，一个div就可以实现所有标签的效果了。</head></p>
+<h3 id="css"><a href="#css" class="headerlink" title="css"></a>css</h3><p>写了一个html，然后发现所有的内容都是默认的黑色，所有内容一字摆开，跟别人的网页不太一样啊？这是什么情况？<br>然后，老师变戏法似的就让我在写一个这样的东西出来<code>&lt;h1 style=&quot;color: yellow;&quot;&gt;Hello world!&lt;/h1&gt;</code>,然后奇迹就出现了，这行字就真的变成yellow了！然后就开始各种<code>height</code>、<code>width</code>、<code>background</code>、<code>margin</code>、<code>padding</code>、<code>border</code>、<code>font</code>……来使这个hello world变得越来越花里胡哨了。<br>直到又发现，写了n个div，想改一下背景颜色，就疯了！为什么？照着这个方法，n个div一个个改？能不疯吗？于是乎，在<code>head</code>里面就有这么一个标签<code>&lt;style&gt;</code>,把所有的css样式全写这里面，然后给需要这个样式的标签一个类（class）名,就可以对所有<code>class</code>为某个值的标签进行控制了！再后来，就直接写一个<code>.css</code>的文件，然后在<code>head</code>里面用<code>&lt;link&gt;</code>引入，就可以达到同样的效果了。而且可以根据你自己喜欢，指定一整套的css样式表放里面，比如你做了100个按钮的样式，你就可以把他们都放进这个css里面，用的时候直接写class名就可以用啦！而几乎所有的UI组件库都是这么做的，比你做的多的一个就是，他们把你记在脑子里的100个类名所代表的意义用一个文档给展示了出来，让更多的人去使用并且帮忙完善。然后更完善，用的人更多，一个良性循环就诞生了。<br>然后慢慢的接触：</p>
+<ul>
+<li><a href="http://www.runoob.com/cssref/css-selectors.html" target="_blank" rel="noopener">css选择器</a></li>
+<li><a href="https://blog.csdn.net/h1lin0010/article/details/78962003" target="_blank" rel="noopener">css安装自定义字体</a></li>
+<li><a href="http://www.w3school.com.cn/css3/css3_animation.asp" target="_blank" rel="noopener">css动画</a></li>
+<li><a href="https://www.runoob.com/w3cnote/flex-grammar.html" target="_blank" rel="noopener">flex弹性布局</a></li>
+<li><a href="http://www.w3school.com.cn/css3/css3_3dtransform.asp" target="_blank" rel="noopener">css3D转换</a></li>
+<li>More<br>各种各样的css写出来，让页面越来越炫！<br>在往后，和js配合以后，让页面变得更加不可思议，各种流星，雪花，3D旋转。<br>常规的css大概就是这么个情况，直到有一天我看到这么一个东西：<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">div.main&#123;</span><br><span class="line">height: 200px;</span><br><span class="line">	width: 200px;</span><br><span class="line">	background:#ccc;</span><br><span class="line">	&gt;img.userlogo&#123;</span><br><span class="line">	height: 100px;</span><br><span class="line">		width: 100px;</span><br><span class="line">		border-radius: 50%;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>这种写法什么鬼？能解析吗？我马上写了一个一模一样的，div没问题，但是里面的图片样式却没有了，这是什么情况？马上上网查了一下，又学了一个新的名词<code>css扩展技术</code>，虽然还是控制页面元素的样式，但是基于css进行了深层次的开发，使可读性增加，还引入了一些js语法。事情变得越来越有意思了!目前常用的就是<code>less</code>、<code>sass/scss</code>。<br>到这里其实就已经差不多明了了，原来js可以把一个文件解析以后再给浏览器去渲染页面？那岂不是说<code>head</code>里面的其他内容也可以控制了？<br>脑子里马上有了一个初步的模型：一个非常复杂的页面效果，源代码其实是这样子的：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&lt;!DOCTYPE html&gt;</span><br><span class="line">&lt;html&gt;&lt;/html&gt;</span><br></pre></td></tr></table></figure></p>
+<p>没了，就是这个样子的！其他的所有的一切，全都交给js去做！请求数据，渲染数据，渲染样式…随便你想怎么玩！<br>然后我就做了一个样的总结：</p>
+<h5 id="如果把html元素作为一块块积木的话，那么css样式表就是针对每一块或者每一类积木进行样式的规定，而且不论怎么写最终只要能给到浏览器解释器能解释的通的格式，那么根据你心情随便你怎么写，但是最后要的还是最原始的格式！"><a href="#如果把html元素作为一块块积木的话，那么css样式表就是针对每一块或者每一类积木进行样式的规定，而且不论怎么写最终只要能给到浏览器解释器能解释的通的格式，那么根据你心情随便你怎么写，但是最后要的还是最原始的格式！" class="headerlink" title="如果把html元素作为一块块积木的话，那么css样式表就是针对每一块或者每一类积木进行样式的规定，而且不论怎么写最终只要能给到浏览器解释器能解释的通的格式，那么根据你心情随便你怎么写，但是最后要的还是最原始的格式！"></a>如果把html元素作为一块块积木的话，那么css样式表就是针对每一块或者每一类积木进行样式的规定，而且不论怎么写最终只要能给到浏览器解释器能解释的通的格式，那么根据你心情随便你怎么写，但是最后要的还是最原始的格式！</h5><h5 id="而且提到css不得不提的一件事就是渲染规则，既然那么多种写法，总得有一个先后顺序吧！"><a href="#而且提到css不得不提的一件事就是渲染规则，既然那么多种写法，总得有一个先后顺序吧！" class="headerlink" title="而且提到css不得不提的一件事就是渲染规则，既然那么多种写法，总得有一个先后顺序吧！"></a>而且提到css不得不提的一件事就是渲染规则，既然那么多种写法，总得有一个先后顺序吧！</h5><h5 id="css渲染规则（就近渲染原则）：css选择符权重渲染规则：important-gt-内联-gt-ID-gt-类-gt-标签-伪类-属性选择-gt-伪对象-gt-通配符-gt-继承"><a href="#css渲染规则（就近渲染原则）：css选择符权重渲染规则：important-gt-内联-gt-ID-gt-类-gt-标签-伪类-属性选择-gt-伪对象-gt-通配符-gt-继承" class="headerlink" title="css渲染规则（就近渲染原则）：css选择符权重渲染规则：important &gt; 内联 &gt; ID &gt; 类 &gt; 标签 | 伪类 | 属性选择 &gt; 伪对象 &gt;通配符 &gt; 继承"></a>css渲染规则（就近渲染原则）：css选择符权重渲染规则：important &gt; 内联 &gt; ID &gt; 类 &gt; 标签 | 伪类 | 属性选择 &gt; 伪对象 &gt;通配符 &gt; 继承</h5><h3 id="js"><a href="#js" class="headerlink" title="js"></a>js</h3><p>js，学前端最痛苦的经历啊！但是不得不说也是最开心的经历！<br>一上来，JavaScript，好长一个单词啊。而且前四个字母Java什么鬼，怎么忽然开始学Java了？<a href="https://baike.baidu.com/item/javascript/321142?fromtitle=js&amp;fromid=10687961&amp;fr=aladdin" target="_blank" rel="noopener">什么是JavaScript？</a>，作为初学者，我看完百科的介绍，跟没看差不多。<br>但是随着慢慢的学习呢？<br>从一开始跟着教材，一脸懵逼的，拿一个字符串然后去验证它是什么数据类型，得出是一个<code>String</code>以后，乐的跟二傻子似的，但是不知道为什么乐。<br>然后拿着 <code>1+1</code> ,去做判断，如果 <code>1+1==2</code> ，弹出一个弹框 “哇， 1+1=2”，然后又开始沾沾自喜了。<br>在然后，从0开始循环一直循环到 <code>&lt;=9</code>,然后输出了0123456789，哇，也不知道哇什么呢？<br>再往后，拿一个数组，先看里面到底有什么，然后看里面到底有没有什么，再然后把里面的什么给拿出来，再放回去，再放到第一个，然后打乱，排序，针对里面的那个什么进行改变，然后再拿着他看看她是不是 <code>String</code>，然后这个数组被折腾的差不多了，再建一个数组，跟他并在一块，重复刚才的那个过程，比较相同，比较不同，然后切割重组…也幸亏那是个数组，不是个人…<br>数组折腾完了，在搞一个对象，然后看看他的key是什么，value是什么，key是key的value是不是key是key的value，然后在循环一下，判断一下，然后在对象里面的一个属性居然也是对象，然后…幸亏不是一个人啊…<br>到这了，开始函数了，把上面所有的执行过程，用一个函数对象包括起来，去里面执行去，让你执行你再执行，然后加个定时器，不停的执行…各种组合，各种玩法，只有想不到，没有组不成的。<br>基础就这么一脸懵逼的，搞完了？<br>然后开始有意思的了，获取页面中的一个元素，然后折腾它，改个内容啊，改个样式啊，一会显示一会隐藏啊，增加动画啊…<br>然后点击之前是这样的，点击完了是那样的，鼠标放上去是另一个样子的，然后按按键盘，敲敲屏幕…<br>哇，居然就这么完了好久？<br>再然后，js面向对象编程？<br>工厂模式？监视器模式？…什么乱七八糟的。<br>然后稀里糊涂的就写了一个构造函数，然后用类似的方法实现其他各种模式，好麻烦啊，但是还要学呀！里面的好多思维模式到现在还是不明白…<br>再然后就用构造函数思路，封装了几个常用的功能函数…<br>这是为认为的面向对象：</p>
+<h5 id="js面向对象编程-就是所有的执行目标都作为一个对象来进行操作，所以经常说的一句话“万物皆对象”，对象有几个特点：对象方法分为私有方法和共有方法，对象具有继承性、多态性、可封装性。面向对象就是针对这几个特性来实现不同场景下的功能体现，所谓的各种模式，只不过是前辈们为了帮助新手总结的一些常用的写法而已。"><a href="#js面向对象编程-就是所有的执行目标都作为一个对象来进行操作，所以经常说的一句话“万物皆对象”，对象有几个特点：对象方法分为私有方法和共有方法，对象具有继承性、多态性、可封装性。面向对象就是针对这几个特性来实现不同场景下的功能体现，所谓的各种模式，只不过是前辈们为了帮助新手总结的一些常用的写法而已。" class="headerlink" title="js面向对象编程,就是所有的执行目标都作为一个对象来进行操作，所以经常说的一句话“万物皆对象”，对象有几个特点：对象方法分为私有方法和共有方法，对象具有继承性、多态性、可封装性。面向对象就是针对这几个特性来实现不同场景下的功能体现，所谓的各种模式，只不过是前辈们为了帮助新手总结的一些常用的写法而已。"></a>js面向对象编程,就是所有的执行目标都作为一个对象来进行操作，所以经常说的一句话“万物皆对象”，对象有几个特点：对象方法分为私有方法和共有方法，对象具有继承性、多态性、可封装性。面向对象就是针对这几个特性来实现不同场景下的功能体现，所谓的各种模式，只不过是前辈们为了帮助新手总结的一些常用的写法而已。</h5><h5 id="其中继承性，经常被我认为是this的指向问题，如果this指向发生改变，该方法（或属性）就不可被继承，那么就需要用一个共有属性来继承过来。只要牢记这个的话，this指向不出问题，然后其他问题就是逻辑思维上的烟雾弹了。"><a href="#其中继承性，经常被我认为是this的指向问题，如果this指向发生改变，该方法（或属性）就不可被继承，那么就需要用一个共有属性来继承过来。只要牢记这个的话，this指向不出问题，然后其他问题就是逻辑思维上的烟雾弹了。" class="headerlink" title="其中继承性，经常被我认为是this的指向问题，如果this指向发生改变，该方法（或属性）就不可被继承，那么就需要用一个共有属性来继承过来。只要牢记这个的话，this指向不出问题，然后其他问题就是逻辑思维上的烟雾弹了。"></a>其中继承性，经常被我认为是this的指向问题，如果this指向发生改变，该方法（或属性）就不可被继承，那么就需要用一个共有属性来继承过来。只要牢记这个的话，this指向不出问题，然后其他问题就是逻辑思维上的烟雾弹了。</h5><p>（跟人讨论过，但是没说过我，随着见识越来越广，等真的发现问题了再回来改！）</p>
+<p>到这里，基础部分就差不多都涵盖了，直到忽然想起来的一个问题，这些数据都是死的，在我自己电脑上是没问题啊！但是这么实现那种分分钟上百万条数据的数据呢，我不能一个字一个字写吧！<br>这就引入了一个新的概念 <code>ajax</code>,作为和后台对接的关键部分，当时讲的是分为四步：<br>1.创建XMLHTTPRequest对象<br>2.使用open方法设置和服务器的交互信息<br>3.设置发送的数据，开始和服务器端交互<br>4.注册事件、更新界面<br>原生代码：</p>
+<h4 id="get请求"><a href="#get请求" class="headerlink" title="get请求"></a>get请求</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">//步骤一:创建异步对象</span><br><span class="line">var ajax = new XMLHttpRequest();</span><br><span class="line">//步骤二:设置请求的url参数,参数一是请求的类型,参数二是请求的url,可以带参数,动态的传递参数starName到服务端</span><br><span class="line">ajax.open(&apos;get&apos;,&apos;getStar.php?starName=&apos;+name);</span><br><span class="line">//步骤三:发送请求</span><br><span class="line">ajax.send();</span><br><span class="line">//步骤四:注册事件 onreadystatechange 状态改变就会调用</span><br><span class="line">ajax.onreadystatechange = function () &#123;</span><br><span class="line">   if (ajax.readyState==4 &amp;&amp;ajax.status==200) &#123;</span><br><span class="line">    // 如果能够进到这个判断 说明 数据 完美的回来了,并且请求的页面是存在的</span><br><span class="line">　　　　console.log(ajax.responseText);//输入相应的内容</span><br><span class="line">  　　&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="post请求"><a href="#post请求" class="headerlink" title="post请求"></a>post请求</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">//创建异步对象  </span><br><span class="line">var xhr = new XMLHttpRequest();</span><br><span class="line">//设置请求的类型及url</span><br><span class="line">//post请求一定要添加请求头才行不然会报错</span><br><span class="line">xhr.setRequestHeader(&quot;Content-type&quot;,&quot;application/x-www-form-urlencoded&quot;);</span><br><span class="line"> xhr.open(&apos;post&apos;, &apos;02.post.php&apos; );</span><br><span class="line">//发送请求</span><br><span class="line">xhr.send(&apos;name=fox&amp;age=18&apos;);</span><br><span class="line">xhr.onreadystatechange = function () &#123;</span><br><span class="line">    // 这步为判断服务器是否正确响应</span><br><span class="line">  if (xhr.readyState == 4 &amp;&amp; xhr.status == 200) &#123;</span><br><span class="line">    console.log(xhr.responseText);</span><br><span class="line">  &#125; </span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<p>但是这个真的好麻烦啊，然后jQuery应运而生，一个<code>$.ajax()</code>，里面带上参数，齐活！而且好多方法他都帮忙给封装好了！<br>有了一个jQuery，就开始真的入坑了，各种各样的js插件，应接不暇啊！针对各个功能尽量做到极致，而且还在不断更新中。<br>然后又自学了node.js的部分内容，至少会用npm安装一些需要用到的插件了，然后部署vue，angular开始跟着教程先一步步做，然后看一些常用的api，但是由于公司项目中没有用到，也只能学习一下，为下一段工作做准备了。<br>闲暇之余，跟着php又学了一些php代码，并且成功的写了一个连接数据库的本地用户管理后台。了解了三句半的sql语句。<br>在然后到又知道了一个github之后，更是一发不可收拾，曾经跟我朋友说，github就是个坑，跳进去以后就不想写代码了，因为你辛辛苦苦写的自己认为很好的功能，人家已经帮你封装好了，你需要的就是看看人家是怎么写的，然后借用一下，star一下就好啦！<br>但是，越来越接触那些大牛们的代码，越发的感觉自己掌握的东西还不够，但是眼花缭乱的代码，反而让自己迷茫了。</p>
+<p>梳理一下以前学东西的经历，让自己清醒一下，开始下一段的学习吧！</p>
+<p>一个然后走遍全文！哈哈！</p>
+<h3 id="参考博客"><a href="#参考博客" class="headerlink" title="参考博客"></a>参考博客</h3><ul>
+<li><a href="https://blog.csdn.net/zilaiye1314/article/details/78060952" target="_blank" rel="noopener">HTML 块标签，行内标签，行内块标签以及之间的相互转换</a></li>
+<li><a href="https://www.cnblogs.com/my_front_research/archive/2013/01/07/2849874.html" target="_blank" rel="noopener">css样式渲染规则</a></li>
+<li><a href="http://www.cnblogs.com/tugenhua0707/p/5068449.html" target="_blank" rel="noopener">深入理解Javascript面向对象编程</a></li>
+<li><a href="https://www.cnblogs.com/cythia/p/6978323.html" target="_blank" rel="noopener">原生js的ajax请求</a></li>
+</ul>
+
+      
+    </div>
+    
+    
+    
+
+		<!-- 增加作者信息 -->
+		<div>
+      
+        
+<div class="my_post_copyright">
+  <script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
+
+  <!-- JS库 sweetalert 可修改路径 -->
+  <script type="text/javascript"  src="http://jslibs.wuxubj.cn/sweetalert_mini/jquery-1.7.1.min.js"></script>
+  <script src="http://jslibs.wuxubj.cn/sweetalert_mini/sweetalert.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="http://jslibs.wuxubj.cn/sweetalert_mini/sweetalert.mini.css">
+  <p><span>本文标题:</span><a href="/2018/10/05/前端学习的总结/">前端学习的总结</a></p>
+  <p><span>文章作者:</span><a href="/" title="访问 Purplechild 的个人博客">Purplechild</a></p>
+  <p><span>发布时间:</span>2018年10月05日 - 21:10</p>
+  <p><span>最后更新:</span>2018年10月06日 - 01:10</p>
+  <p><span>原始链接:</span><a href="/2018/10/05/前端学习的总结/" title="前端学习的总结">http://purplechildren.github.io/2018/10/05/前端学习的总结/</a>
+    <span class="copy-path"  title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="http://purplechildren.github.io/2018/10/05/前端学习的总结/"  aria-label="复制成功！"></i></span>
+  </p>
+  <p><span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" title="Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0)">署名-非商业性使用-禁止演绎 4.0 国际</a> 转载请保留原文链接及作者。</p>  
+</div>
+<script> 
+    var clipboard = new Clipboard('.fa-clipboard');
+    clipboard.on('success', $(function(){
+      $(".fa-clipboard").click(function(){
+        swal({   
+          title: "",   
+          text: '复制成功',   
+          html: false,
+          timer: 500,   
+          showConfirmButton: false
+        });
+      });
+    }));  
+</script>
+
+      
+		</div>
+
+
+    
+
+    
+
+    
+		
+		<!-- 博文结束以后显示样式 -->
+		<div>
+				
+					<div>
+    
+        <div style="text-align:center;color: #ccc;font-size:14px;">
+            -------------本文结束
+            <i class="fa fa-paw"></i>
+            感谢您的阅读-------------
+        </div>
+    
+</div>
+
+				
+		</div>
+		
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/web前端/" rel="tag"><i class="fa fa-tag"></i> web前端</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018/09/29/js-点击飘心效果/" rel="next" title="js-点击飘心效果">
+                <i class="fa fa-chevron-left"></i> js-点击飘心效果
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+        <!-- JiaThis Button BEGIN -->
+<div class="jiathis_style">
+<span class="jiathis_txt">分享到：</span>
+<a class="jiathis_button_fav">收藏夹</a>
+<a class="jiathis_button_copy">复制网址</a>
+<a class="jiathis_button_email">邮件</a>
+<a class="jiathis_button_weixin">微信</a>
+<a class="jiathis_button_qzone">QQ空间</a>
+<a class="jiathis_button_tqq">腾讯微博</a>
+<a class="jiathis_button_douban">豆瓣</a>
+<a class="jiathis_button_share">一键分享</a>
+
+<a href="http://www.jiathis.com/share?uid=2140465" class="jiathis jiathis_txt jiathis_separator jtico jtico_jiathis" target="_blank">更多</a>
+<a class="jiathis_counter_style"></a>
+</div>
+<script type="text/javascript" >
+var jiathis_config={
+  data_track_clickback:true,
+  summary:"",
+  shortUrl:false,
+  hideMore:false
+}
+</script>
+<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js?uid=" charset="utf-8"></script>
+<!-- JiaThis Button END -->
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <p class="site-author-name" itemprop="name">Purplechild</p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">10</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">7</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">7</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+
+          
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="https://github.com/purplechildren" target="_blank" title="GitHub">
+                      
+                        <i class="fa fa-fw fa-globe"></i>GitHub</a>
+                  </span>
+                
+            </div>
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#入坑之前"><span class="nav-number">1.</span> <span class="nav-text">入坑之前</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#什么是前端？就是前端啊-！"><span class="nav-number">2.</span> <span class="nav-text">什么是前端？就是前端啊 ！</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#html"><span class="nav-number">3.</span> <span class="nav-text">html</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#css"><span class="nav-number">4.</span> <span class="nav-text">css</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#如果把html元素作为一块块积木的话，那么css样式表就是针对每一块或者每一类积木进行样式的规定，而且不论怎么写最终只要能给到浏览器解释器能解释的通的格式，那么根据你心情随便你怎么写，但是最后要的还是最原始的格式！"><span class="nav-number">4.0.1.</span> <span class="nav-text">如果把html元素作为一块块积木的话，那么css样式表就是针对每一块或者每一类积木进行样式的规定，而且不论怎么写最终只要能给到浏览器解释器能解释的通的格式，那么根据你心情随便你怎么写，但是最后要的还是最原始的格式！</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#而且提到css不得不提的一件事就是渲染规则，既然那么多种写法，总得有一个先后顺序吧！"><span class="nav-number">4.0.2.</span> <span class="nav-text">而且提到css不得不提的一件事就是渲染规则，既然那么多种写法，总得有一个先后顺序吧！</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#css渲染规则（就近渲染原则）：css选择符权重渲染规则：important-gt-内联-gt-ID-gt-类-gt-标签-伪类-属性选择-gt-伪对象-gt-通配符-gt-继承"><span class="nav-number">4.0.3.</span> <span class="nav-text">css渲染规则（就近渲染原则）：css选择符权重渲染规则：important &gt; 内联 &gt; ID &gt; 类 &gt; 标签 | 伪类 | 属性选择 &gt; 伪对象 &gt;通配符 &gt; 继承</span></a></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#js"><span class="nav-number">5.</span> <span class="nav-text">js</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#js面向对象编程-就是所有的执行目标都作为一个对象来进行操作，所以经常说的一句话“万物皆对象”，对象有几个特点：对象方法分为私有方法和共有方法，对象具有继承性、多态性、可封装性。面向对象就是针对这几个特性来实现不同场景下的功能体现，所谓的各种模式，只不过是前辈们为了帮助新手总结的一些常用的写法而已。"><span class="nav-number">5.0.1.</span> <span class="nav-text">js面向对象编程,就是所有的执行目标都作为一个对象来进行操作，所以经常说的一句话“万物皆对象”，对象有几个特点：对象方法分为私有方法和共有方法，对象具有继承性、多态性、可封装性。面向对象就是针对这几个特性来实现不同场景下的功能体现，所谓的各种模式，只不过是前辈们为了帮助新手总结的一些常用的写法而已。</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#其中继承性，经常被我认为是this的指向问题，如果this指向发生改变，该方法（或属性）就不可被继承，那么就需要用一个共有属性来继承过来。只要牢记这个的话，this指向不出问题，然后其他问题就是逻辑思维上的烟雾弹了。"><span class="nav-number">5.0.2.</span> <span class="nav-text">其中继承性，经常被我认为是this的指向问题，如果this指向发生改变，该方法（或属性）就不可被继承，那么就需要用一个共有属性来继承过来。只要牢记这个的话，this指向不出问题，然后其他问题就是逻辑思维上的烟雾弹了。</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#get请求"><span class="nav-number">5.1.</span> <span class="nav-text">get请求</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#post请求"><span class="nav-number">5.2.</span> <span class="nav-text">post请求</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#参考博客"><span class="nav-number">6.</span> <span class="nav-text">参考博客</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        
+<!-- 增加访问量js -->
+<script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+<div class="copyright">&copy; <span itemprop="copyrightYear">2018</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Purplechild</span>
+<!-- 增加访问量div -->
+	<div class="powered-by">
+		<i class="fa fa-user-md"></i><span id="busuanzi_container_site_uv">
+			本站访客数:<span id="busuanzi_value_site_uv"></span>
+		</span>
+	</div>
+
+
+
+ 
+</div>
+
+
+  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+<!-- 
+
+  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Muse</a> v5.1.4</div>
+
+
+ -->
+
+
+<div class="theme-info">
+  <div class="powered-by"></div>
+  <span class="post-count">博客全站共15.3k字</span>
+</div>
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/canvas-nest/canvas-nest.min.js"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+	
+<!-- 背景粒子图案 -->	
+<script type="text/javascript" src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js">
+</script>
+
+
+<!-- 页面点击小红心 -->
+<script type="text/javascript" src="/js/src/love.js"></script>
+
+</body>
+</html>
